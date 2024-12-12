@@ -1,0 +1,17 @@
+1. c
+2. c
+3. nu b
+4. a, b si c
+5. c
+7. === mai restrictiv si compara si tipurile de date ale variabilelor, == nu compara si tipurile de date
+8. 
+9. a si b
+10. a si c si d
+11. BMW
+12. error
+13. X = 523
+Y = 55
+
+14. 7
+15. error
+
