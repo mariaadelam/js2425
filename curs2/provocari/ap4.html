@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      4. Sa se afiseza inversul unui numar introdus de la tastatura. Ex. 2547 se
+      afiseaza 7452
+    </p>
+    <script>
+      let numar = prompt("Introdu un număr:");
+
+      // Inițializăm variabila pentru numărul inversat
+      let invers = "";
+
+      // Inversăm numărul folosind un for loop
+      for (let i = numar.length - 1; i >= 0; i--) {
+        invers += numar[i];
+      }
+
+      // Afișăm rezultatul în pagină
+      document.write("Numărul introdus este: " + numar + "<br>");
+      document.write("Inversul numărului este: " + invers);
+    </script>
+  </body>
+</html>

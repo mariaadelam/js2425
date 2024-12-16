@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p>1. Faceti un calculator, care primeste de la tastatura 2 valori si calculeaza : suma +, diferenta -,
+		produsul *, impartirea / , modulo %, puterea a**b si b**a
+		afisati rezultatele in pagina.</p>
+  <script>
+    //date de intrare
+    //a - primul nr
+    //b - al doilea nr
+
+    //date de iesire
+    //s - suma
+    // d - diferenta
+    //p - produs
+    //c - impartire
+    //r -modulo
+    //pa_b - putere a**b si 
+    //pb_a - putere b**a
+
+    let a; 
+    let b;
+    let s = 0;
+    let d = 0;
+    let p = 0;
+    let c = 0;
+    let r = 0;
+    let pa_b = 0;
+    let pb_a = 0;
+    a = +window.prompt('Introduceti primul numar', 3); 
+    b = +window.prompt('Introduceti al 2-lea numar', 2); 
+    s = a+b;
+    d = a-b;
+    p = a *b;
+    c = a/b;
+    r = a%b;
+    pa_b = a**b;
+    pb_a = b**a;
+    document.write('<p> Suma este: ' + s + '</p>');
+    document.write('<p> Diferenta este: ' + d + '</p>');
+    document.write('<p> Produsul este: ' + p + '</p>');
+    document.write('<p> Catul este: ' + c + '</p>');
+    document.write('<p> Restul este: ' + r + '</p>');
+    document.write('<p> Puterea a**b: ' + pa_b + '</p>');
+    document.write('<p> Puterea b**a: ' + pb_a + '</p>');
+  </script>
+</body>
+
+</html>

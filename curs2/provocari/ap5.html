@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <p>
+    5. Să se afle cifra maximă a unui număr (cea mai mare cifra a unui număr).
+  </p>
+  <script>
+    let numar = prompt("Introdu un număr:");
+
+    let maxCifra = 0;
+
+    // Parcurgem fiecare cifră a numărului
+    for (let i = 0; i < numar.length; i++) {
+      if (numar[i] > maxCifra) {
+        maxCifra = numar[i]; // Actualizăm cifra maximă dacă găsim una mai mare
+      }
+    }
+
+    // Afișăm rezultatul în pagină
+    document.write(
+      "Cea mai mare cifră a numărului " + numar + " este: " + maxCifra
+    );
+  </script>
+</body>
+
+</html>

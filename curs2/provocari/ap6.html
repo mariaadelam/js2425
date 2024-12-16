@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <p>
+    6. Programul ce afisează un calificativ în funcție de nota unui student.
+    Nota va fi setată în variabila $nota. 1-4 isuficient; 5-6 suficient; 7 – 8
+    bun; 9-10 bursier;
+  </p>
+  <script>
+    let $nota = +prompt("Introdu nota studentului (1-10):");
+
+    // Determinare calificativ in functie de nota
+    let calificativ;
+    if ($nota >= 1 && $nota <= 4) {
+      calificativ = "insuficient";
+    } else if ($nota >= 5 && $nota <= 6) {
+      calificativ = "suficient";
+    } else if ($nota >= 7 && $nota <= 8) {
+      calificativ = "bun";
+    } else if ($nota >= 9 && $nota <= 10) {
+      calificativ = "bursier";
+    } else {
+      calificativ = "Notă invalidă";
+    }
+
+    //Rezultat
+    document.write(
+      "Calificativul pentru nota " + $nota + " este: " + calificativ
+    );
+  </script>
+</body>
+
+</html>

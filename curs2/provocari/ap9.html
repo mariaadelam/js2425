@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>9. Să se progrmaeze un senzor care determina cantitatea de
+		carburant aflată în rezervor. Dacă cantitatea de combustibil scade
+		sub 10 litri să afiseze un mesaj de avertizare cu portocaliu: "Va rog
+		sa alimentati!“. Dacă cantitatea de combustibil este < 1 să afișeze cu roșu mesajul :"Ati ramas fara
+			combustibil. Trebuie sa ne oprim!“</p>
+      <script>
+        let cantitateCarburant = 5;
+        if (cantitateCarburant < 1) {
+          document.write("<p style = 'color:red'> Ati ramas fara combustibil. Trebuie sa ne oprim! </p>");
+        }
+        else if (cantitateCarburant < 10) {
+          document.write("<p style = 'color:orange'> Va rugam sa alimentati! </p>");
+        } else {
+          document.write("<p> Carburant suficient! </p>");
+        }
+      </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p>Un showroom BMW vrea să afișeze prețurile pentru modelele disponibile X: 
+    de la X1 pana la X7. Scrie un program care afișează mesajele în formatul:
+    "Mașina a costă de la b euro.", 
+    unde a este modelul mașinii și b este prețul (calculat în funcție de o valoare de 
+    bază).</p>
+  <script>
+    const pretBaza = 40000; // Prețul de bază al unei mașini
+    const diferentaPret = 5000; // Diferența de preț între mașini
+    const modelMasina = 'BMW X'; // Prefixul modelului
+
+    for (let i = 1; i <= 7; i++) {
+      const pret = pretBaza + (i - 1) * diferentaPret; // Calculăm prețul pentru fiecare model
+      document.write(`Mașina ${modelMasina}${i} costă de la ${pret} euro. <br>`);
+    }
+
+  </script>
+</body>
+
+</html>

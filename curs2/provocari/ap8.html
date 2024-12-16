@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <p>
+    8. Folosind cele 3 structure repetitive: while, do while, for, să se
+    afișeze primele 15 numere
+  </p>
+  <script>
+    let n = 15;
+    //for
+    document.write("Primele 15 numere sunt (for): <br>");
+    for (let i = 0; i <= n; i++) {
+      document.write(i + "; ");    
+    }
+
+    //while
+    document.write("<br> Primele 15 numere sunt (while): <br>");
+    let numar = 0;
+    while (numar<=15) {
+      document.write(numar + "; "); 
+      numar++;
+    }
+
+    //do while
+    let nr = 0;
+    document.write("<br> Primele 15 numere sunt (dowhile): <br>");
+    do {
+      document.write(nr + "; "); 
+      nr++;
+    } while (nr <= 15);
+  </script>
+</body>
+
+</html>
