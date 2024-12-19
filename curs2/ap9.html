@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    let n;
+    let i = 0;
+
+    n = eval(prompt('Va rugam introduceti un numar', 4));
+    document.write(` numere impare: `);
+    while (i < n) {
+      if (i % 2 != 0) {
+        // document.write('<p> numere impare: ' + i + '</p>');
+        document.write(` ${i}, `);
+      }
+      i++;
+    }
+  </script>
+</body>
+</html>
