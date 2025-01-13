@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Stilizare pentru tabla de sah */
+      .tabla-sah {
+          display: grid;
+          border: 2px solid black;
+      }
+      .patrat {
+          width: 50px;
+          height: 50px;
+      }
+  </style>
+</head>
+<body>
+
+<div id="tabla"></div>
+
+<script>
+  function sah(nrlinii, nrcoloane, culoare1='white', culoare2='black') {
+      // Creăm un element div pentru a reprezenta tabla
+      let tabla = document.getElementById("tabla");
+      tabla.innerHTML = ''; // Resetăm conținutul tabelei pentru a evita duplicate
+
+      // Setăm stilul pentru tabla de șah folosind CSS Grid
+      tabla.style.gridTemplateRows = `repeat(${nrlinii}, 50px)`;
+      tabla.style.gridTemplateColumns = `repeat(${nrcoloane}, 50px)`;
+      tabla.classList.add('tabla-sah');
+
+      // Generăm pătrățelele pe tabla de șah
+      for (let i = 0; i < nrlinii; i++) {
+          for (let j = 0; j < nrcoloane; j++) {
+              let patrat = document.createElement('div');
+              patrat.classList.add('patrat');
+
+              // Alternăm culorile pentru fiecare pătrățel
+              if ((i + j) % 2 === 0) {
+                  patrat.style.backgroundColor = culoare1;
+              } else {
+                  patrat.style.backgroundColor = culoare2;
+              }
+
+              tabla.appendChild(patrat);
+          }
+      }
+  }
+
+  // Apelăm funcția pentru a genera o tablă de 3x3 cu culorile specificate
+  sah(3, 3, 'magenta', 'green');
+</script>
+
+</body>
+</html>

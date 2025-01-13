@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      1. Creati un vector de siruri si unul de numere. Afișati elementele
+      vectorului de siruri folosind instructiunea „while“. Afisați elementele
+      vectorului de siruri folosind instructiunea „do … while“. Verificati daca
+      un șir dat de voi contine numere divizibile cu 3. Afisati un vector in
+      sens invers.
+    </p>
+
+    <script>
+      //Creati un vector de siruri si unul de numere.
+      let vecSir = ["Hello", "World", "JavaScript", "Coding"];
+      let vecNum = [1, 2, 3, 4, 5];
+
+      //Afișati elementele vectorului de siruri folosind instructiunea „while“.
+      console.log("Afișare cu while:");
+      let i = 0;
+      while (i < vecSir.length) {
+        console.log(vecSir[i]);
+        i++;
+      }
+
+      //afisare cu do..while
+      console.log("\nAfișare cu do ... while:");
+      i = 0;
+      do {
+        console.log(vecSir[i]);
+        i++;
+      } while (i < vecSir.length);
+
+      //Verificati daca un sir dat de voi contine numere divizibile cu 3.
+      function verificaDiv3(sirCautat) {
+        const toateNumerele = sirCautat.match(/\d+/g) || [];
+        const numereDiv3 = [];
+
+        for (let j = 0; j < toateNumerele.length; j++) {
+          if (parseInt(toateNumerele[j]) % 3 === 0) {
+            numereDiv3.push(toateNumerele[j]);
+          }
+        }
+
+        if (numereDiv3.length > 0) {
+          console.log(
+            `\nȘirul conține numere divizibile cu 3: ${numereDiv3.join(", ")}`
+          );
+        } else {
+          console.log("\nȘirul nu conține numere divizibile cu 3.");
+        }
+      }
+
+      verificaDiv3("abc123xyz456"); // Exemplu de utilizare
+
+      //Afisati un vector in sens invers.
+      const vector = [1, 2, 3, 4];
+
+      const inversVector = [];
+
+      for (let i = vector.length - 1; i >= 0; i--) {
+        //parcurgerea vectorului se face da la ultimul element
+        const valoare = vector[i];
+
+        inversVector.push(valoare);
+      }
+      //se mai poate folosi functia:
+      // reverse();
+      //vector.reverse();
+      //console.log(vector);
+      console.log(inversVector);
+    </script>
+  </body>
+</html>

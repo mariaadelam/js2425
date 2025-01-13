@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      /* Tabelul va fi pe prima linie a paginii */
+      table {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      table,
+      th,
+      td {
+        border: none;
+      }
+
+      th,
+      td {
+        padding: 8px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="text-align: center">Clasament Echipe</h2>
+    <table id="tabelClasament">
+      <thead>
+        <tr>
+          <th>Loc</th>
+          <th>Echipa</th>
+          <th>Puncte</th>
+          <th>Victorii</th>
+          <th>Egaluri</th>
+          <th>Înfrângeri</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Liniile vor fi generate cu JavaScript -->
+      </tbody>
+    </table>
+    <script>
+      const echipe = [
+        { echipa: "FCSB", victorii: 10, egaluri: 5, infrangeri: 3 },
+        { echipa: "CFR Cluj", victorii: 9, egaluri: 7, infrangeri: 2 },
+        {
+          echipa: "Universitatea Craiova",
+          victorii: 8,
+          egaluri: 6,
+          infrangeri: 4,
+        },
+        { echipa: "Rapid București", victorii: 7, egaluri: 8, infrangeri: 3 },
+        { echipa: "Farul Constanța", victorii: 6, egaluri: 6, infrangeri: 6 },
+        {
+          echipa: "Sepsi Sfântu Gheorghe",
+          victorii: 5,
+          egaluri: 7,
+          infrangeri: 6,
+        },
+        { echipa: "Dinamo București", victorii: 4, egaluri: 6, infrangeri: 8 },
+        { echipa: "Petrolul Ploiești", victorii: 4, egaluri: 5, infrangeri: 9 },
+        { echipa: "Voluntari", victorii: 3, egaluri: 6, infrangeri: 9 },
+        { echipa: "Hermannstadt", victorii: 2, egaluri: 8, infrangeri: 8 },
+        { echipa: "Oțelul Galați", victorii: 1, egaluri: 8, infrangeri: 9 },
+        { echipa: "U Cluj", victorii: 14, egaluri: 4, infrangeri: 0 },
+        { echipa: "FC Botoșani", victorii: 0, egaluri: 18, infrangeri: 0 },
+        { echipa: "Poli Iași", victorii: 0, egaluri: 0, infrangeri: 18 },
+      ];
+
+      // Calculăm punctele pentru fiecare echipă
+      for (let i = 0; i < echipe.length; i++) {
+        echipe[i].puncte = echipe[i].victorii * 3 + echipe[i].egaluri * 1; // Puncte = victorii * 3 + egaluri * 1, regula din fotbal 
+      }
+
+      // Sortăm echipele în ordine descrescătoare după puncte
+      echipe.sort((a, b) => b.puncte - a.puncte);
+
+      // Generăm liniile din tabel
+      const tbody = document.querySelector("#tabelClasament tbody");
+      for (let i = 0; i < echipe.length; i++) {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+              <td>${i + 1}</td> <!-- Locul -->
+              <td>${echipe[i].echipa}</td>
+              <td>${echipe[i].puncte}</td> <!-- Punctele -->
+              <td>${echipe[i].victorii}</td>
+              <td>${echipe[i].egaluri}</td>
+              <td>${echipe[i].infrangeri}</td>
+          `;
+        tbody.appendChild(row);
+      }
+    </script>
+  </body>
+</html>

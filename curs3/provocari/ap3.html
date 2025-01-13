@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      3. Declarati un array de 3×4 folosind codul de creare a unui vector.
+      Practic, array-ul este de fapt format din 3 array-uri de cate 4 valori
+      fiecare. var myArray = new Array(); Populati matricea cu valori. Afisati
+      array-ul in documentul vostru. Verificati daca matricea contine numere
+      pare și afisati un mesaj corespunzător.
+    </p>
+
+    <script>
+      // Declararea unui array 3x4 folosind un vector
+      var myArray = new Array();
+
+      // Popularea matricei cu valori
+      for (var i = 0; i < 3; i++) {
+        myArray[i] = new Array(); // Fiecare element devine un sub-array
+        for (var j = 0; j < 4; j++) {
+          myArray[i][j] = Math.floor(Math.random() * 100); // Valori random intre 0 si 99
+        }
+      }
+
+      // Afișarea matricei
+      console.log("Matricea:");
+      for (var i = 0; i < myArray.length; i++) {
+        console.log(myArray[i].join(" "));
+        document.write(myArray[i].join(" ") + "<br>");
+      }
+
+      // Verificarea dacă matricea conține numere pare
+      var hasEvenNumbers = false;
+      for (var i = 0; i < myArray.length; i++) {
+        for (var j = 0; j < myArray[i].length; j++) {
+          if (myArray[i][j] % 2 === 0) {
+            hasEvenNumbers = true;
+            break;
+          }
+        }
+        if (hasEvenNumbers) break;
+      }
+
+      // Afisarea unui mesaj corespunzător
+      document.write("<br>");
+      if (hasEvenNumbers) {
+        document.write("Matricea conține numere pare.");
+      } else {
+        document.write("Matricea nu conține numere pare.");
+      }
+    </script>
+  </body>
+</html>
