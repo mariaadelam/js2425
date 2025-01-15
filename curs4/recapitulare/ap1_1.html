@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //2
+    // console.log(x);
+    // var x;
+    // x = 5;
+
+    //Recapitulare, intrebarea 3
+    //nu se mai aplica hoisting-ul
+    //hoistingul se aplica doar la var si function
+    // x = 5;
+    // console.log(x);
+    // let x;
+
+    //4
+    // let x;
+    // x = 5;
+    // console.log(x);
+
+    //6
+    // for (i =0, j=10, u=25; i<20 && j<30 && u>15; i+=2, j+=4, u--) {
+    //   console.log("i:" + i + " j:" + j + " u:" + u);
+    // }
+
+    //7
+    var myArr= ['Laptop', 'Tv', 'Mobile', 'Desktop', 'Monitor'];
+    myArr[5] = 'Book'; //mai adaug un element
+    myArr[3] = 'Mouse'; //suprascrie cheia
+    myArr[8] = 'Tastatura'; 
+    myArr['desktop'] = 'Desktop';
+    var newArr = {
+      0 : 'a',
+      1 : 'b',
+      2 : 'c',
+      d: 'D'
+    };
+    for(let i =0; i < myArr.length; i++) {
+      if (typeof myArr[i] != 'undefined') {
+            document.write('<p>' + myArr[i] + '</p>');
+      } 
+    }
+
+    // for (const key in newArr){
+    //      document.write('<p>' + newArr[key] + '</p>');
+    // }
+
+    for (const key in newArr){
+         document.write('<p>' + newArr[key] + '</p>');
+    }
+
+    for (const element of Object.values(newArr)){
+         document.write('<p>' + element + '</p>');
+    }
+
+
+    //afiseaza tipul de date al valorilor din array
+    console.log(typeof myArr); //object
+    console.log(myArr[2]);
+    console.log(typeof newArr); //object
+    console.log(newArr.d);
+
+    //ma uit pe ex din clasa
+    //ma uit pe cartile domnului profesor din gitHub
+
+  </script>
+</body>
+</html>
