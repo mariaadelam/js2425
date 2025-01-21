@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operatii de baza</title>
+  </head>
+  <body>
+    <script>
+      let numarA = parseFloat(prompt("Introduceti primul nr: ", 3));
+      let numarB = parseFloat(prompt("Introduceti al doilea nr: ", 10));
+      let operatia = prompt("Introduceti operatia de efectuat: ");
+
+      switch (operatia) {
+        case "+":
+          let adunare = numarA + numarB;
+          document.write(`Rezultatul adunarii este: ${adunare}`);
+          break;
+
+        case "-":
+          let scadere = numarA - numarB;
+          document.write(`Rezultatul scaderii este: ${scadere}`);
+          break;
+
+        case "*":
+          let inmultire = numarA * numarB;
+          document.write(`Rezultatul inmultirii este: ${inmultire}`);
+          break;
+
+        case "/":
+          let impartire = numarA / numarB;
+          document.write(`Rezultatul impartirii este: ${impartire}`);
+          break;
+
+        default:
+          alert("Operatie necorespunzatoare! Introduceți una dintre: +, -, *, /.");
+          break;
+      }
+    </script>
+  </body>
+</html>
