@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //denumirea functiilor incepe cu litera mare
+      function Student(id, nume, varsta, nota1, nota2) {
+        const NOTAOFICIU = 2;
+        this.id = id;
+        this.nume = nume;
+        this.varsta = varsta;
+        this.nota1 = nota1;
+        this.nota2 = nota2;
+
+        this.salut = function () {
+          console.log(`Salut, numele meu este ${this.nume}`);
+        };
+
+        this.examen = function () {
+          if (this.nota1 > 2 && this.nota1 <= 8) {
+            this.nota1 = this.nota1 + NOTAOFICIU;
+          } else {
+            this.nota1 = 2;
+          }
+          console.log(`Nota 1 este ${this.nota1}, iar nota 2 este ${this.nota2}`);
+        };
+
+        this.medie = function () {
+          console.log(`Nota finala este ${(this.nota1 + this.nota2)/2}`)
+        };
+      }
+
+      const student1 = new Student(1,'Ion', 25, 7, 1);
+      console.log(student1);
+      student1.salut();
+      student1.examen();
+      student1.medie();
+      const student2 = new Student(5,'Vasi', 20, 6, 5);
+      student2.salut();
+      student2.examen();
+      student2.medie();
+    </script>
+  </body>
+</html>
