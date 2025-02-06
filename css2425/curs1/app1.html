@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .demo{
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 25px;
+      color: green;
+    }
+    .demo2{
+      color: blue;
+      font-size: 12px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <button id="apasa">Schimba culoarea</button>
+  <button id="apasa2">Schimba div</button>
+  <button id="apasa3">Buton 3</button>
+  <div id="para">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id corrupti vel commodi, recusandae odit atque magnam quasi quisquam tenetur consequuntur.</p>
+    <p>Ab, harum ex numquam cum cumque repudiandae laborum, vero totam architecto tenetur consequatur veniam, recusandae natus voluptatem magni atque aspernatur!</p>
+    <p>Incidunt praesentium quaerat deserunt deleniti corrupti nobis quod illo sit consequatur. Sed magnam voluptatem fugiat doloremque. Exercitationem quis neque dolorem.</p>
+    <p>Quibusdam ratione temporibus saepe quod veritatis nostrum architecto, labore quidem rem, voluptatibus porro vero quasi necessitatibus eos iure assumenda? Eius.</p>
+    <p>Provident magni optio omnis reprehenderit repellat modi voluptates possimus ullam libero voluptatum vel itaque laborum, iure saepe. Quod, praesentium assumenda.</p>
+    <p>Tempore reiciendis facilis enim odit, maiores omnis perspiciatis, nam cum consequuntur sit, ducimus atque excepturi aperiam ut tenetur fuga animi!</p>
+    <p>Mollitia distinctio, qui tempore reprehenderit, quis veritatis at unde doloribus expedita laboriosam enim non quos perferendis ipsa adipisci, earum a.</p>
+    <p>Necessitatibus recusandae laborum asperiores harum unde quidem, a et architecto excepturi natus sed rem nulla velit dolorem veritatis veniam totam!</p>
+    <p>Consequatur quo nulla deserunt, tempore numquam ratione ab cumque animi ipsa ipsam, accusantium placeat inventore suscipit laboriosam cum voluptate cupiditate!</p>
+    <p style="font-style: italic">Recusandae dicta possimus animi tempora sit libero qui atque totam sunt amet quaerat, tenetur consequatur sapiente. Omnis, odit. Vel, voluptatum?</p>
+  </div>
+  <p class="demo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit repudiandae assumenda dignissimos quaerat aspernatur tempora nisi perferendis veniam sed asperiores.</p>
+  <p class="demo">Voluptates enim error, totam aperiam commodi accusantium labore voluptate laborum doloremque reprehenderit quae eligendi. Ratione sed esse id consequuntur nisi?</p>
+  <p class="demo">Harum nam culpa quam natus blanditiis minus voluptate officia libero. Deleniti a corrupti sed debitis rerum dignissimos et sunt ratione?</p>
+  <p class="demo">Ducimus ipsa explicabo alias, sit nemo nobis deserunt, voluptate dolorum voluptatibus in reiciendis, tempore dolores vitae dolore iste distinctio amet.</p>
+  <script>
+    let btn = document.getElementById('apasa');
+    let p = document.getElementsByTagName('p');
+    let btn2 = document.getElementById('apasa2');
+    let div = document.getElementById("para");
+    let btn3 = document.getElementById('apasa3');
+    let paraDemo = document.getElementsByClassName('demo');
+    // let paraDemo = document.querySelectorAll('.demo');
+    console.log("p >>:", p);
+    // let btn = document.querySelector('#apasa');
+    btn.addEventListener('click', function () {
+      // for (const element of p) {
+      //   element.style.color = "red";
+      // }
+
+      let arr = [...p];
+      arr.forEach((element) => {
+        element.style.color = "red";
+        element.style.fontSize = "34px";
+      })
+    });
+    btn2.addEventListener('click', function(){
+        div.style.cssText = "border: 1px solid green; background:red; width:600px; margin: auto; color:#e3e3e3";
+    });
+
+    btn3.addEventListener('click', function(){
+      let myArr = [...paraDemo];
+      myArr.forEach(element => {
+        element.classList.add("demo2");
+      });
+    });
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+
+div{
+  border: 2px;
+  background-color: blueviolet;
+}
+div>div{
+  border: 2px;
+  background-color: blanchedalmond;
+}
+div>div>div{
+border: 2px;
+background-color: brown;
+}

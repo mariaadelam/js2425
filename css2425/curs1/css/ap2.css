@@ -1,0 +1,10 @@
+#titlu{
+  width: 500px;
+  margin: auto;
+  border-bottom: 2px red solid;
+}
+
+.text{
+  font-size: 2em;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
